@@ -1,0 +1,160 @@
+print("Markete hoşgeldiniz... Alışverişiniz Başlıyor!!!")
+
+urun1=2
+urun2=4
+urun3=5
+urun4=3
+
+toplam=(urun1*3+urun2*2+urun3+urun4*5)
+
+print("Alışverişiniz Bitti...",toplam)
+
+
+toplam=toplam-(urun4*2)print
+
+print("Ürünler iade edildi yeni değerin= ", toplam)
+###########################################################################
+print("Bu bir Alan ve Çevre Hesabı Uygulamasıdır...")
+
+kisakenar=5
+uzunkenar=10
+
+Alan=kisakenar*uzunkenar
+Cevre=2*(uzunkenar+kisakenar)
+
+print("Alan=",Alan)
+print("Çevre=",Cevre)
+############################################################################
+dizi1=[5,"Pazartesi",17,"Ders"]
+print(dizi1[0]+dizi1[2])
+print(dizi1[1]+dizi1[3])
+############################################################################
+dizi1=[5,"Pazartesi",17,"Ders"]
+
+print(dizi1[1]+dizi1[3])
+
+print(str(dizi1[0])+str(dizi1[2]))
+############################################################################
+uzunkenar=int(input("Uzun Kenar için değer gir: "))
+kisakenar=int(input("Kısa kenar için değer gir: "))
+Alan=uzunkenar*kisakenar
+Cevre=2*(uzunkenar+kisakenar)
+print("Alan=",Alan)
+print("Cevre=",Cevre)
+############################################################################
+uzunkenar=int(input("Uzun Kenar için değer gir: "))
+kisakenar=int(input("Kısa kenar için değer gir: "))
+
+
+if uzunkenar<kisakenar:
+    print("Uzun Kenar Kısa kenardan küçük olamaz")
+else:    
+    Alan=uzunkenar*kisakenar
+    Cevre=2*(uzunkenar+kisakenar)
+    print("Alan=",Alan)
+    print("Cevre=",Cevre)
+    #############################################################################
+sayi1=int(input("Sayı1 için değer gir:"))
+sayi2=int(input("Sayı2 için değer gir:"))
+sayi3=int(input("Sayı3 için değer gir:"))
+sayi4=int(input("Sayı4 için değer gir:"))
+
+dizi=[]
+if sayi1<10 and sayi2<10 and sayi3<10 and sayi4<10:
+    sonuc=sayi1*sayi2*sayi3*sayi4
+    dizi.append(sonuc)
+elif sayi1>10 and sayi2>10 and sayi3>10 and sayi4>10:
+    sonuc=sayi1+sayi2+sayi3+sayi4
+    dizi.append(sonuc)
+
+print(dizi)
+
+##############################################################################################
+gun=["pazartesi","salı","çarşamba","perşembe","cuma","cumartesi","pazar"]
+
+for i in range(0,len(gun)):
+    if gun[i]=="cumartesi" or gun[i]=="pazar":
+        print("Sokağa çıkma yasağı var. Bugün günlerden ",gun[i])
+    else:
+        print("Bugün yasak yok ama dikkatli ol. Bugün günlerden", gun[i])
+##########################################################################################
+
+olumlu=[]
+olumsuz=[]
+
+for i in range(0,5):
+    sayi = int(input("Kullanıcıya sayı gir:"))
+    if sayi%7==0:
+        olumlu.append(sayi)
+    elif sayi%7!=0:
+        olumsuz.append(sayi)
+
+print("7ye Bölünen sayılar",olumlu,"7ye bölünemeyen sayılar",olumsuz)
+
+#############################################################################################
+ogrenci1=[]
+ogrenci2=[]
+ogrenci3=[]
+ogrenci4=[]
+ogrenci5=[]
+sonuc=[]
+for i in range(0,15):
+    puan=int(input("Sınav notunu gir: "))
+    if i<3:
+        ogrenci1.append(puan)
+    elif i<6 and i>=3:
+        ogrenci2.append(puan)
+    elif i<9 and i>=6:
+        ogrenci3.append(puan)
+    elif i<12 and i>=9:
+        ogrenci4.append(puan)
+    elif i<15 and i>=12:
+        ogrenci5.append(puan)
+
+sonuc.append((ogrenci1[0]*20)/100+(ogrenci1[1]*20)/100+(ogrenci1[2]*60)/100)
+sonuc.append((ogrenci2[0]*20)/100+(ogrenci2[1]*20)/100+(ogrenci2[2]*60)/100)
+sonuc.append((ogrenci3[0]*20)/100+(ogrenci3[1]*20)/100+(ogrenci3[2]*60)/100)
+sonuc.append((ogrenci4[0]*20)/100+(ogrenci4[1]*20)/100+(ogrenci4[2]*60)/100)
+sonuc.append((ogrenci5[0]*20)/100+(ogrenci5[1]*20)/100+(ogrenci5[2]*60)/100)
+
+for j in range(0,len(sonuc)):
+    if sonuc[j]>=50:
+        if j==0:
+            print("Öğrenci1 Başarılı")
+        if j==1:
+            print("Öğrenci2 Başarılı")
+        if j==2:
+            print("Öğrenci3 Başarılı")
+        if j==3:
+            print("Öğrenci4 Başarılı")
+        if j==4:
+            print("Öğrenci5 Başarılı")
+    ##############################################################################################
+sayi=int(input("Sayi girin..."))
+
+for satir in range(1,sayi+1):
+    for sutun in range(1,sayi+1):
+        sonuc=satir*sutun
+        print(sonuc,end=" ")
+    print()
+    ##############################################################################################
+    10 satır ve 10 sutundan olusan bir karemiz vardı
+Bu kareler içine rastgele sayılar atadık (rand)0-10
+kullanıcadan devamlı gitmek istediği noktayı satır ve sutun numaralarını istedik
+Eğer orada 0 değeri varsa oyuncuya oyunu kaybettin desin o an ki puanı neyse onu yaz
+0 değeri yoksa noktada ki sayısal değeri puana eklesin
+
+puanı 30 olan oyunu kazandın diye yazı alsın ve oyun bitsin
+####################################################################################################
+while (True):
+    kontrol=input("Elektrik var mı?")
+    if kontrol=="evet":
+        print("Evde elektrik var ama bilgisayar güç almıyor")
+    elif kontrol=="hayır":
+        kontrol=input("Evde elektrik yok ama senin şarjın var mı?")
+        if kontrol=="evet":
+            print("Bilgisayarınla beraber teknik servise başvur")
+            break
+        elif kontrol=="hayır":
+            print("Şarj edebileceğin bir alan bul")
+            break
